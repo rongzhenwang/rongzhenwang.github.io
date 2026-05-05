@@ -1,5 +1,29 @@
 <html>
 
+<style>
+    .profile-header {
+        border-collapse: collapse;
+    }
+
+    .profile-photo-cell {
+        width: 180px;
+        padding-right: 28px;
+        vertical-align: middle;
+    }
+
+    .profile-photo {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .profile-info {
+        vertical-align: middle;
+    }
+</style>
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="description" content="Home page of Rongzhen Wang">
@@ -12,12 +36,12 @@
 
 <div id="layout-content" style="margin-top:25px">
 
-<table><tbody><tr>
-    <td width="650">
+<table class="profile-header">
+<tbody>
+<tr>
+    <td class="profile-info" width="650">
         <div id="toptitle"><h1>Rongzhen Wang (王榕甄) &nbsp;</h1></div>
-        <h3>PhD Student</h3>  
         <p>
-            <a href="http://ai.ruc.edu.cn/english/index.htm" target="_blank">Gaoling School of AI</a>, <a href="https://www.ruc.edu.cn/" target="_blank">Renmin University of China</a> <br>
             Email: <a href="mailto:wangrz@ruc.edu.cn">wangrz@ruc.edu.cn</a> <br>
             Links: <a href="https://scholar.google.com/citations?user=nq7ocqQAAAAJ" target="_blank">[Google Scholar]</a>
             <!-- <a href="https://github.com/rongzhenwang" target="_blank">[Github]</a> -->
@@ -25,8 +49,12 @@
         </p>
     </td>
 
-    <td><img src="./files/photo_2025march.jpg" border="0" width="200"><br> </td>
-</tr></tbody></table>
+    <td class="profile-photo-cell">
+        <img class="profile-photo" src="./files/photo_2025march.jpg" alt="Rongzhen Wang">
+    </td>
+</tr>
+</tbody>
+</table>
 
 <h2>Biography</h2>
     <p>
@@ -34,17 +62,24 @@
         Prior to PhD, I received my Bachelor's degree from the <a href="http://stat.ruc.edu.cn/EN/index.htm" target="_blank">School of Statistics</a> at Renmin University of China in 2023.
     </p>
     <p>
-        Currently, I am exploring the field of deep learning theory, with a core goal to understand and predict the behaviour of today's neural networks.
-        I want to discover real phenomena and principles to inform and improve practice.
+        I am interested in <strong>optimization</strong> and <strong>architectural</strong> improvements for large-scale model training, particularly through theoretical tools and systematic experiments.
     </p>
     <p>
-        Previously, I have worked on topics in generalization theory and language model alignment.
+        Previously, I have worked on the theoretical analysis and method design of optimization algorithms and generative models.
     </p>
 
 <h2>Selected Publications</h2>
 * indicates the equal contribution
 
 <ul>
+    <li>
+        <paper><a href="https://arxiv.org/abs/2505.19223" target="_blank">LLaDA 1.5: Variance-Reduced Preference Optimization for Large Language Diffusion Models</a></paper><br>
+        Fengqi Zhu*, <strong>Rongzhen Wang</strong>*, Shen Nie, Xiaolu Zhang, Chunwei Wu, Jun Hu, Jun Zhou, Jianfei Chen, Yankai Lin, Ji-Rong Wen, Chongxuan Li <br>
+       Annual Meeting of the Association for Computational Linguistics <strong>(ACL)</strong>, 2026 <br>
+        <a href="https://github.com/ML-GSAI/LLaDA-1.5" target="_blank">[Code]</a>
+        <a href="https://huggingface.co/GSAI-ML/LLaDA-1.5" target="_blank">[Model]</a>
+    </li>
+    
     <li>
         <paper><a href="https://arxiv.org/abs/2502.14583" target="_blank">A Theory for Conditional Generative Modeling on Multiple Data Sources</a></paper><br>
         <strong>Rongzhen Wang</strong>, Yan Zhang, Chenyu Zheng, Chongxuan Li, Guoqiang Wu <br>
@@ -58,15 +93,6 @@
         <strong>Rongzhen Wang</strong>, Chenyu Zheng, Guoqiang Wu, Xu Min, Xiaolu Zhang, Jun Zhou, Chongxuan Li <br>
         Advances in Neural Information Processing Systems <strong>(NeurIPS)</strong>, 2024 <br>
         <a href="files/neurips2024_bilevelstability_slides.pdf" target="_blank">[Slides]</a>
-    </li>
-
-
-    <li>
-        <paper><a href="https://arxiv.org/abs/2505.19223" target="_blank">LLaDA 1.5: Variance-Reduced Preference Optimization for Large Language Diffusion Models</a></paper><br>
-        Fengqi Zhu*, <strong>Rongzhen Wang</strong>*, Shen Nie, Xiaolu Zhang, Chunwei Wu, Jun Hu, Jun Zhou, Jianfei Chen, Yankai Lin, Ji-Rong Wen, Chongxuan Li <br>
-        Preprint, 2025 <br>
-        <a href="https://github.com/ML-GSAI/LLaDA-1.5" target="_blank">[Code]</a>
-        <a href="https://huggingface.co/GSAI-ML/LLaDA-1.5" target="_blank">[Model]</a>
     </li>
 </ul>
 
@@ -108,10 +134,10 @@ I like to take notes :) Here are some of my presentations and notes.
         Tutorial on group session, <strong>A Brief Introduction to Learning Theory</strong>, 11.2024 <a href="files/groupsession_202411_learningtheory.pdf" target="_blank">[Slides]</a>
     </li>
     <li>
-        Research report on group session, <strong>Algorithmic Stability of Bilevel (Stochastic) Gradient Descent</strong>, 3.2024 <a href="files/groupsession_202403_bilevelstability.pdf" target="_blank">[Slides]</a>
+        Report on group session, <strong>Algorithmic Stability of Bilevel (Stochastic) Gradient Descent</strong>, 3.2024 <a href="files/groupsession_202403_bilevelstability.pdf" target="_blank">[Slides]</a>
     </li>
     <li>
-        Topic review on group session, <strong>Algorithmic Stability of (Stochastic) Gradient Descent</strong>, 12.2023 <a href="files/groupsession_202312_sgdstability.pdf" target="_blank">[Slides]</a>
+        Report on group session, <strong>Algorithmic Stability of (Stochastic) Gradient Descent</strong>, 12.2023 <a href="files/groupsession_202312_sgdstability.pdf" target="_blank">[Slides]</a>
     </li>
 </ul>
 
